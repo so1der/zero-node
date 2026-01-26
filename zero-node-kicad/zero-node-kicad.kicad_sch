@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "3e9b4825-f530-4bf7-91f6-776424ac8c86")
 	(paper "A4")
+	(title_block
+		(title "Zero Node")
+		(date "01.2026")
+		(rev "1.0")
+	)
 	(lib_symbols
 		(symbol "CN3791:CN3791_MPPT_Solar_Charger"
 			(exclude_from_sim no)
