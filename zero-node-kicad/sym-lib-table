@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "CN3791")(type "KiCad")(uri "${KIPRJMOD}/symbols/CN3791.kicad_sym")(options "")(descr ""))
+  (lib (name "rp2040-zero")(type "KiCad")(uri "${KIPRJMOD}/symbols/rp2040-zero.kicad_sym")(options "")(descr ""))
+  (lib (name "BK-18650-PC4_MPD")(type "KiCad")(uri "${KIPRJMOD}/symbols/BK-18650-PC4_MPD.kicad_sym")(options "")(descr ""))
+  (lib (name "TP4056")(type "KiCad")(uri "${KIPRJMOD}/TP4056.kicad_sym")(options "")(descr ""))
+  (lib (name "aht10")(type "KiCad")(uri "${KIPRJMOD}/symbols/aht10.kicad_sym")(options "")(descr ""))
+)

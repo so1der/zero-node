@@ -1,0 +1,194 @@
+(footprint "CN3791 MPPT Solar Charger"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 22.43 4.75 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "8531036a-bb11-44d5-a014-825e103d6161")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "CN3791 MPPT Solar Charger"
+		(at 22.43 6.25 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "9eedff5f-491e-49e5-a814-70258b3319f2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "46c6cb70-2cdd-46f9-869c-9fd7ed373ff5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2b173007-7ac7-466a-9ad7-6dbdefd91d4c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -0.07 0.3)
+		(end 44.93 20.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "dffacfd0-77d5-4953-a1fd-dcc8b3785207")
+	)
+	(fp_rect
+		(start 13.9 18)
+		(end 23.5 20)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "39236aa4-fcf6-41b4-9b6e-58a61a88bfee")
+	)
+	(fp_text user "VIN"
+		(at 15.6355 17.533333 90)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "24b980db-86af-44b3-85b0-9c8fa8155bba")
+		(effects
+			(font
+				(size 1.1 1.1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "CN3791 MPPT Solar Charger"
+		(at 5.958573 11.1715 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "2bd58353-972a-49ca-8887-c22fbd4bfba8")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "GND"
+		(at 18.1755 17.9 90)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "669027f3-0c44-48da-889a-c71fd6d7459c")
+		(effects
+			(font
+				(size 1.1 1.1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "GND"
+		(at 20.7155 17.9 90)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "9a158980-d884-43c9-99ff-70293516d70c")
+		(effects
+			(font
+				(size 1.1 1.1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "BAT"
+		(at 23.2555 17.664285 90)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "a9b747b1-7362-4e07-8dec-c867e2471464")
+		(effects
+			(font
+				(size 1.1 1.1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 22.43 7.75 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "5c47752e-f651-4c55-9b04-3c869bc700c8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 14.93 19.02 90)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9c08c87a-5721-4f5c-b01e-a64a724e3fa3")
+	)
+	(pad "2" thru_hole circle
+		(at 17.47 19.02 90)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "af97012b-a830-483a-a8ef-d431511082a9")
+	)
+	(pad "3" thru_hole circle
+		(at 20.01 19.02 90)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "216b5bf1-2b09-4617-9bc7-869ad2bfd2e8")
+	)
+	(pad "4" thru_hole circle
+		(at 22.55 19.02 90)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "147eb833-53fe-456c-861d-d791b03e208f")
+	)
+	(embedded_fonts no)
+)
