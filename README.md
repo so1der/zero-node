@@ -1,11 +1,11 @@
 # Zero Node
 
-["Zero Node"](images/preview.jpg)
+!["Zero Node"](images/preview.jpg)
 
 Zero Node is a standalone Meshtastic repeater based on the RP2040 Zero microcontroller and the Ra-01/Ra-02 radio modules. It has a CN3791 module for charging from the solar pantels, as well as a TP4056 for charging from an external power supply if one is provided. The low consumption of the repeater (~20 mA in idle mode) will ensure operation for 100-250 hours with a 6000 mAh battery without any recharging. With a small solar panel, the operating time increases radically - a 3 W solar panel can almost completely compensate for the repeater's consumption even on winter sunless days. Paired with a good, high-mounted antenna, this repeater will be an excellent solution for expanding the coverage of your Meshtastic network!
 
-["PCB"](images/pcb.jpg)
-["Case"](images/case.jpg)
+!["PCB"](images/pcb.jpg)
+!["Case"](images/case.jpg)
 
 ## Microcontroller firmware
 
@@ -77,7 +77,7 @@ Reduced clock speed:
 
 ## Schematic 
 
-["Schematic"](images/schematic.png)
+!["Schematic"](images/schematic.png)
 
 Key points regarding the schematic:
 
@@ -89,12 +89,12 @@ Key points regarding the schematic:
 
 # Zero Node
 
-["Zero Node"](images/preview.jpg)
+!["Zero Node"](images/preview.jpg)
 
 Zero Node - це автономний Meshtastic-ретранслятор, побудований на основі мікроконтролера RP2040 Zero, та радіомодулів Ra-01/Ra-02. Він має модуль CN3791 для зарядки від сонця, а також TP4056 для зарядки від зовнішнього блока живлення якщо такий передбачено. Низьке споживання ретранслятора (~20 мА в стані спокою) забезпечить роботу впродовж 100-250 годин з акумулятором ємністю 6000 мАг без будь якої підзарядки. За наявності невеличкої сонячної панелі час роботи радикально підвищується - сонячна панель на 3 Вт здатна майже повністю компенсувати споживання ретранслятора навіть в зимні безсонячні дні. В парі з гарною, високо розташованою антеною, даний ретранслятор стане чудовим рішенням для розширення покриття вашої Meshtastic мережі!
 
-["PCB"](images/pcb.jpg)
-["Case"](images/case.jpg)
+!["PCB"](images/pcb.jpg)
+!["Case"](images/case.jpg)
 
 ## Прошивка мікроконтролера
 
@@ -166,7 +166,7 @@ pio run -e zero-node --target upload
 
 ## Схема
 
-["Schematic"](images/schematic.png)
+!["Schematic"](images/schematic.png)
 
 Основні моменти стосовно схеми:
 
