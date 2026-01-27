@@ -121,7 +121,7 @@ Zero Node - це автономний Meshtastic-ретранслятор, по�
 
 - [11-3 Sanhe](https://www.rcscomponents.kiev.ua/product/11-3_121626.html) [(креслення)](https://www.rcscomponents.kiev.ua/datasheets/11-3-datasheet.pdf)
 - [G311MF](https://www.rcscomponents.kiev.ua/product/g311mf_105942.html) [(креслення)](https://www.rcscomponents.kiev.ua/datasheets/g212mf_g311mf.pdf)
-- [G221CMF](https://www.rcscomponents.kiev.ua/product/g221cmf-gainta-korpus-pc-z-prozoroiu-kryshkoiu-svitlo-siryi-115kh90kh80mm_55570.html) [(креслення)]()https://www.rcscomponents.kiev.ua/datasheets/g221mf_g331mf.pdf
+- [G221CMF](https://www.rcscomponents.kiev.ua/product/g221cmf-gainta-korpus-pc-z-prozoroiu-kryshkoiu-svitlo-siryi-115kh90kh80mm_55570.html) [(креслення)](https://www.rcscomponents.kiev.ua/datasheets/g221mf_g331mf.pdf)
 
 ## Компіляція прошивки
 
