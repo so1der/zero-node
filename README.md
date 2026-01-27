@@ -6,7 +6,7 @@
 
 !["Zero Node"](images/preview.jpg)
 
-Zero Node is a standalone Meshtastic repeater based on the RP2040 Zero microcontroller and the Ra-01/Ra-02 radio modules. It has a CN3791 module for charging from the solar pantels, as well as a TP4056 for charging from an external power supply if one is provided. The low consumption of the repeater (~20 mA in idle mode) will ensure operation for 100-250 hours with a 6000 mAh battery without any recharging. With a small solar panel, the operating time increases radically - a 3 W solar panel can almost completely compensate for the repeater's consumption even on winter sunless days. Paired with a good, high-mounted antenna, this repeater will be an excellent solution for expanding the coverage of your Meshtastic network!
+Zero Node is a standalone Meshtastic repeater based on the RP2040 Zero microcontroller and the Ra-01/Ra-02 radio modules. It has a CN3791 module for charging from the solar panels, as well as a TP4056 for charging from an external power supply if one is provided. The low consumption of the repeater (~20 mA in idle mode) will ensure operation for 100-250 hours with a 6000 mAh battery without any recharging. With a small solar panel, the operating time increases radically - a 3 W solar panel can almost completely compensate for the repeater's consumption even on winter sunless days. Paired with a good, high-mounted antenna, this repeater will be an excellent solution for expanding the coverage of your Meshtastic network!
 
 !["PCB"](images/pcb.jpg)
 !["Case"](images/case.jpg)
