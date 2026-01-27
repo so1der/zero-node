@@ -1,4 +1,8 @@
-# Zero Node
+# README: [English](#zero-node-english)
+# README: [Українська](#zero-node-українська)
+---
+
+# Zero Node English
 
 !["Zero Node"](images/preview.jpg)
 
@@ -87,7 +91,7 @@ Key points regarding the schematic:
 - U.FL connector J1 is needed only if you use the Ra-01 radio module
 
 
-# Zero Node
+# Zero Node Українська 
 
 !["Zero Node"](images/preview.jpg)
 
