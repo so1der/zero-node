@@ -41,7 +41,7 @@ To compile the firmware for this repeater, I created a separate variant file and
 ```bash
 git clone https://github.com/meshtastic/firmware
 cd firmware
-wget
+wget https://raw.githubusercontent.com/so1der/zero-node/refs/heads/main/zero-node.patch
 git apply -v zero-node.patch
 ```
 
@@ -130,7 +130,7 @@ Zero Node - це автономний Meshtastic-ретранслятор, по�
 ```bash
 git clone https://github.com/meshtastic/firmware
 cd firmware
-wget 
+wget https://raw.githubusercontent.com/so1der/zero-node/refs/heads/main/zero-node.patch
 git apply -v zero-node.patch
 ```
 
