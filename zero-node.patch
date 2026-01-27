@@ -1,0 +1,131 @@
+diff --git a/src/SerialConsole.cpp b/src/SerialConsole.cpp
+index dd2acb599..6b0f2bdfb 100644
+--- a/src/SerialConsole.cpp
++++ b/src/SerialConsole.cpp
+@@ -15,7 +15,7 @@
+ #endif
+ 
+ #ifdef RP2040_SLOW_CLOCK
+-#define Port Serial2
++#define Port Serial1
+ #else
+ #ifdef USER_DEBUG_PORT // change by WayenWeng
+ #define Port USER_DEBUG_PORT
+@@ -145,4 +145,4 @@ void SerialConsole::log_to_serial(const char *logLevel, const char *format, va_l
+         emitLogRecord(ll, thread ? thread->ThreadName.c_str() : "", format, arg);
+     } else
+         RedirectablePrint::log_to_serial(logLevel, format, arg);
+-}
+\ No newline at end of file
++}
+diff --git a/src/mesh/RadioInterface.cpp b/src/mesh/RadioInterface.cpp
+index aaaca719e..f84908b19 100644
+--- a/src/mesh/RadioInterface.cpp
++++ b/src/mesh/RadioInterface.cpp
+@@ -37,7 +37,7 @@ const RegionInfo regions[] = {
+         https://www.etsi.org/deliver/etsi_en/300200_300299/30022002/03.02.01_60/en_30022002v030201p.pdf
+         FIXME: https://github.com/meshtastic/firmware/issues/3371
+      */
+-    RDEF(EU_433, 433.0f, 434.0f, 10, 0, 10, true, false, false),
++    RDEF(EU_433, 433.0f, 434.0f, 10, 0, 20, true, false, false),
+ 
+     /*
+        https://www.thethingsnetwork.org/docs/lorawan/duty-cycle/
+diff --git a/variants/rp2040/zero-node/platformio.ini b/variants/rp2040/zero-node/platformio.ini
+new file mode 100644
+index 000000000..2fa0a68e0
+--- /dev/null
++++ b/variants/rp2040/zero-node/platformio.ini
+@@ -0,0 +1,25 @@
++[env:zero-node]
++custom_meshtastic_hw_model = 47
++custom_meshtastic_hw_model_slug = ZERO-NODE
++custom_meshtastic_architecture = rp2040
++custom_meshtastic_actively_supported = true
++custom_meshtastic_support_level = 3
++custom_meshtastic_display_name = RP2040 Zero Node
++custom_meshtastic_images = pico.svg
++custom_meshtastic_tags = RPi, DIY
++custom_meshtastic_requires_dfu = true
++
++extends = rp2040_base
++board = waveshare_rp2040_zero
++board_level = pr
++upload_protocol = picotool
++# add our variants files to the include and src paths
++build_flags =
++  ${rp2040_base.build_flags}
++  -D RPI_PICO
++  -I variants/rp2040/zero-node
++  -D HW_SPI1_DEVICE
++  -D DEBUG_RP2040_PORT=Serial
++#  -D NO_USB
++debug_build_flags = ${rp2040_base.build_flags}, -g
++debug_tool = cmsis-dap ; for e.g. Picotool
+diff --git a/variants/rp2040/zero-node/variant.h b/variants/rp2040/zero-node/variant.h
+new file mode 100644
+index 000000000..028e174c4
+--- /dev/null
++++ b/variants/rp2040/zero-node/variant.h
+@@ -0,0 +1,61 @@
++#define ARDUINO_ARCH_AVR
++
++// Reduce clock speed down to 18 MHz to reduce power consumption
++//#define RP2040_SLOW_CLOCK
++
++#ifdef RP2040_SLOW_CLOCK
++// Since UART1 is busy because of the I2C/SPI buses, we need to modify source code (src/SerialConsole.cpp) and use UART0 (Serial1)
++#define SERIAL2_TX 0
++#define SERIAL2_RX 1
++// Reroute log output in SensorLib when USB is not available
++#define log_e(...) Serial1.printf(__VA_ARGS__)
++#define log_i(...) Serial1.printf(__VA_ARGS__)
++#define log_d(...) Serial1.printf(__VA_ARGS__)
++#endif
++
++// Enable AHT10 temperature sensor
++#define ENVIRONMENTAL_TELEMETRY_MODULE_ENABLE 1
++#define I2C_SDA 4
++#define I2C_SCL 5
++
++// Disable unused components
++#define HAS_GPS 0
++#define HAS_SCREEN 0
++#define EXT_NOTIFY_OUT -1
++#define BUTTON_PIN -1
++
++// Heartbeat LED
++#define LED_PIN 0
++#ifdef RP2040_SLOW_CLOCK
++#undef LED_PIN
++#define LED_PIN -1 
++#endif
++
++// Battery related settings
++#define BATTERY_PIN 26
++// ratio of voltage divider = 3.0 (R1=200k, R2=100k)
++#define ADC_MULTIPLIER 3.0
++#define BATTERY_SENSE_RESOLUTION_BITS ADC_RESOLUTION
++// Custom Li-Ion discharge curve (since while powering directly from battery, RP2040 Zero can't measure battery voltege lower than 3.3V)
++#define OCV_ARRAY 4190, 4050, 3990, 3890, 3800, 3750, 3700, 3650, 3600, 3500, 3400
++#define EXT_CHRG_DETECT 27
++#define EXT_CHRG_DETECT_MODE INPUT_PULLDOWN
++
++// LoRa related settings
++#define USE_RF95
++
++#undef LORA_SCK
++#undef LORA_MISO
++#undef LORA_MOSI
++#undef LORA_CS
++
++#define LORA_SCK 10
++#define LORA_MISO 12
++#define LORA_MOSI 11
++#define LORA_CS 13
++
++#define LORA_DIO0 8
++#define LORA_RESET 9
++#define LORA_DIO1 7
++#define LORA_DIO2 6
++#define LORA_DIO3 RADIOLIB_NC
