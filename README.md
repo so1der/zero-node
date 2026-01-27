@@ -55,6 +55,20 @@ After compiling, the **.uf2** file will be available at the path `firmware/.pio/
 pio run -e zero-node --target upload
 ```
 
+The main board settings are made in a special `variant.h` file of the board at the path: `variants/rp2040/zero-node/variant.h`. By default, you compile the firmware with a normal clock speed. To compile the firmware with a reduced clock speed, uncomment the corresponding define at the beginning of the file.
+
+Normal clock speed:
+```h
+// Reduce clock speed down to 18 MHz to reduce power consumption
+//#define RP2040_SLOW_CLOCK
+```
+
+Reduced clock speed:
+```h
+// Reduce clock speed down to 18 MHz to reduce power consumption
+#define RP2040_SLOW_CLOCK
+```
+
 
 ## Schematic 
 
@@ -117,11 +131,26 @@ default_envs = zero-node
 pio run -e zero-node
 ```
 
-Після компіляції **.uf2** файл буде доступний за шляхом `/home/ctl/firmware/.pio/build/zero-node/`. Можна вручну "перетягнути" його на мікроконтролер, або можна прямо в VS Code натиснути галочку "Upload" (Ctrl + Alt + U), чи виконати команду:
+Після компіляції **.uf2** файл буде доступний за шляхом `firmware/.pio/build/zero-node/`. Можна вручну "перетягнути" його на мікроконтролер, або можна прямо в VS Code натиснути галочку "Upload" (Ctrl + Alt + U), чи виконати команду:
 
 ```bash
 pio run -e zero-node --target upload
 ```
+
+Основні налаштування плати відбуваються в спеціальному `variant.h` файлі плати за шляхом: `variants/rp2040/zero-node/variant.h`. За замовчуванням ви скомпілюєте прошивку зі звичайною тактовою частотою. Щоб скомпілювати прошивку зі зменшеною тактовою частотою, розкоментуйте відповідний дефайн на початку файла.
+
+Звичайна тактова частота:
+```h
+// Reduce clock speed down to 18 MHz to reduce power consumption
+//#define RP2040_SLOW_CLOCK
+```
+
+Зменшена тактова частота:
+```h
+// Reduce clock speed down to 18 MHz to reduce power consumption
+#define RP2040_SLOW_CLOCK
+```
+
 
 ## Схема
 
