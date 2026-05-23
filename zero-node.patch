@@ -22,13 +22,12 @@ diff --git a/src/mesh/RadioInterface.cpp b/src/mesh/RadioInterface.cpp
 index aaaca719e..f84908b19 100644
 --- a/src/mesh/RadioInterface.cpp
 +++ b/src/mesh/RadioInterface.cpp
-@@ -37,7 +37,7 @@ const RegionInfo regions[] = {
+@@ -79,6 +79,6 @@ const RegionInfo regions[] = {
          https://www.etsi.org/deliver/etsi_en/300200_300299/30022002/03.02.01_60/en_30022002v030201p.pdf
          FIXME: https://github.com/meshtastic/firmware/issues/3371
       */
--    RDEF(EU_433, 433.0f, 434.0f, 10, 0, 10, true, false, false),
-+    RDEF(EU_433, 433.0f, 434.0f, 10, 0, 20, true, false, false),
- 
+-    RDEF(EU_433, 433.0f, 434.0f, 10, 10, false, false, PROFILE_STD, PRESET(LONG_FAST)),
++    RDEF(EU_433, 433.0f, 434.0f, 10, 20, false, false, PROFILE_STD, PRESET(LONG_FAST)),
      /*
         https://www.thethingsnetwork.org/docs/lorawan/duty-cycle/
 diff --git a/variants/rp2040/zero-node/platformio.ini b/variants/rp2040/zero-node/platformio.ini
